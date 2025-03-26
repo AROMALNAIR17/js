@@ -1,0 +1,64 @@
+//html//
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button id="mybutt">Roll</button><br>
+  <label id="mylabel1" class="mylabel"></label><br>
+  <label id="mylabel2" class="mylabel"></label><br>
+  <label id="mylabel3" class="mylabel"></label><br>
+
+  <script src="java.js"></script>
+</body>
+</html
+
+
+//css//
+
+
+   body{
+
+    font-family: verdana;
+    text-align: center;
+}
+#mybutt{
+
+    font-size: medium;
+    padding: 5px 25px;
+    background: #a39797;
+    border-radius: 5px;
+}
+.mylabel{
+    font-size: 3em;
+}
+
+//js//
+      const mybutt = document.getElementById("mybutt");
+          const label1 = document.getElementById("mylabel1");
+          const label2 = document.getElementById("mylabel2");
+          const label3 = document.getElementById("mylabel3");
+          
+          const min = 1;
+          const max = 6;
+          let rand1, rand2, rand3;
+          
+          mybutt.onclick = function () {
+              rand1 = Math.floor(Math.random() * max) + min;
+              rand2 = Math.floor(Math.random() * max) + min;
+              rand3 = Math.floor(Math.random() * max) + min;
+          
+              label1.textContent = rand1;
+              label2.textContent = rand2;
+              label3.textContent = rand3;
+          };
+          
+
+
+
+ 

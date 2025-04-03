@@ -1,0 +1,70 @@
+//js
+
+  const mytext =document.getElementById("mytext");
+  const mysubmit= document.getElementById("mysubmit");
+  const resultElement=document.getElementById("resultElement");
+  let age=0;
+
+
+  
+       mysubmit.onclick = function(){
+        age=mytext.Value;
+        age=Number(age);
+
+        
+  if(age>=100){
+    
+    resultElement.textContent=`yo u r good`;
+}
+
+else if(age==0){
+    
+    resultElement.textContent=`you cant enter`;
+
+ }
+
+
+ else if(age >=18){
+   
+    resultElement.textContent=`u r elegible`;
+
+ }
+
+ else if(age<0){
+ 
+    resultElement.textContent=`youage cannot be below zero`;
+
+ }
+
+ 
+    
+    
+else{
+    console.log("you r not ");
+    resultElement.textContent=`you r not`;
+}
+       }
+
+
+//html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <label>enter you age:</label>
+ <input type="text" id="mytext"><br>
+ <button type="submit" id="mysubmit">submit</button>
+ <p id="resultElement"></p>
+ <script src="java.js"></script>
+
+
+
+</body>
+</html>

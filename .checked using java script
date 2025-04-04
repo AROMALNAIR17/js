@@ -1,0 +1,75 @@
+// html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<input type="checkbox" id="mycheckbox">
+<label for="mycheckbox">sub</label><br><br>
+
+<input type="radio" id="visabtn" name="card">
+<label for="visabtn">Visa</label><br>
+
+<input type="radio" id="mastercard" name="card">
+<label for="mastercard">Mastercard</label><br>
+
+<input type="radio" id="gpay" name="card">
+<label for="gpay">Google Pay</label><br>
+
+<button type="submit" id="sumbit">Submit</button>
+
+<p id="subresult"></p>
+<p id="payment"></p>
+
+<script src="java.js"></script>
+
+</body>
+</html>
+
+//css
+  body{
+  font-family: Verdana;
+  font-size: 2em;
+}
+#mysubmit{
+  font-size: 1em;
+}
+  
+
+  
+
+//javascript
+
+
+const mycheckbox = document.getElementById("mycheckbox");
+const visabtn = document.getElementById("visabtn");
+const mastercard = document.getElementById("mastercard");
+const gpay = document.getElementById("gpay");
+const submit = document.getElementById("sumbit");    
+const subresult = document.getElementById("subresult");
+const payment = document.getElementById("payment");
+
+submit.onclick = function() {
+    if (mycheckbox.checked) {
+        subresult.textContent = `You are subscribed`;
+    } else {
+        subresult.textContent = `You are not subscribed`;
+    }
+
+    if (visabtn.checked) {
+        payment.textContent = `You are paying with Visa`;
+    } else if (mastercard.checked) {
+        payment.textContent = `You are paying with Mastercard`;
+    } else if (gpay.checked) {
+        payment.textContent = `You are paying with Google Pay`;
+    } else {
+        payment.textContent = `Please select a payment method`;
+    }
+}

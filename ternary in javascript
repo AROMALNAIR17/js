@@ -1,0 +1,8 @@
+//js code
+let purchaseamount=101;
+   let discount = purchaseamount>=100 ? 10 :0;
+   console.log(`your toatal is$${purchaseamount-purchaseamount*(discount/100)}`);
+
+
+
+
